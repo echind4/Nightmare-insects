@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxs6u82ql5ayx"]
+
+[ext_resource type="Script" uid="uid://bckbtko4qrb6a" path="res://Scripts/playerController.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://bog7jmklyyoj" path="res://Sprites/images__8__2-removebg-preview (1).png" id="2_6t5aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
+size = Vector2(96, 145)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_6t5aa")
